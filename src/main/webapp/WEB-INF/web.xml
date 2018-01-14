@@ -8,9 +8,17 @@
   	<servlet-name>servletDemo</servlet-name>
   	<servlet-class>ServletDemo.servletDemo</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>drawCheckCode</servlet-name>
+  	<servlet-class>ServletDemo.CheckinDrawer</servlet-class>
+  </servlet>
   
   <servlet-mapping>
   	<servlet-name>servletDemo</servlet-name>
   	<url-pattern>/ServletDemo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>drawCheckCode</servlet-name>
+  	<url-pattern>/CheckinDrawer</url-pattern>
   </servlet-mapping>
 </web-app>

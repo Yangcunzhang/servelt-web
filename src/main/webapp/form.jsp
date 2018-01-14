@@ -8,8 +8,10 @@
 </head>
 <body>
 <form id="login"  method="POST" action="/demo/ServletDemo">
-用户:<input type="text" name="username"><br>
-密码:<input type="text" name="password"><br>
+用户: <input type="text" name="username"><br>
+密码: <input type="text" name="password"><br>
+验证:<input type="text" name="chekin"><br>
+<img src="/demo/CheckinDrawer"/><br/>
 <input type="submit" value="登录">
 </form>
 </body>
