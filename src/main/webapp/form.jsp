@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form id="login"  method="POST" action="/demo/ServletDemo">
+<form id="login"  method="POST" action="/demo/ParamServlet">
 用户: <input type="text" name="username"><br>
 密码: <input type="text" name="password"><br>
 验证:<input type="text" name="chekin"><br>
