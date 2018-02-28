@@ -9,6 +9,6 @@
 
 </head>
 <body>
-欢迎<%=session.getAttribute("name") %>登录系统!
+欢迎您登陆<%=application.getAttribute("website") %>
 </body>
 </html>

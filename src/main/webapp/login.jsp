@@ -4,7 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/resources/css/login.css"/>
+<%-- <link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/resources/css/login.css"/> --%>
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+		crossorigin="anonymous">
 <title>IT沙龙后台管理登录</title>
 <!-- <script type="text/javascript">
 function reCheckcode(img) {
@@ -12,19 +15,30 @@ function reCheckcode(img) {
 	img.src="drawCode?"+Math.random();
 }
 </script> -->
-</head>
-<span >
-<% if (request.getAttribute("err") != null){
-	out.println(request.getAttribute("err")+"<br/>");
-}%>
-</span>
-<form id="login" method="post" action="/demo/paramServlet">
-<p>用户:</p><input type="text" name="username"/><br/>
-<p>密码:</p><input type="password" name="pass"/><br/>
-<input type="submit" value="登录"/>
-</form>
+<body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-<!-- 生成验证码URI  http://localhost:9999/demo/drawCode -->
-<!-- <img src="drawCode" onclick="reCheckcode(this)"/> -->
+<div class="container">
+	<div class="row">
+	<div class="col-md-3">
+	<!-- Ajax和表单是post提交 -->
+		<form id="login" method="post" action="/demo/paramServlet">
+		  <div class="form-group">
+		    <label for="exampleInputEmail1"> 用戶</label>
+		    <input type="text"  class="form-control" name="username"  placeholder="請輸入賬戶">
+		    <small id="emailHelp" class="form-text text-muted">密碼必填</small>
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputPassword1">密碼</label>
+		    <input type="password" class="form-control" name="pass" placeholder="請輸入密碼">
+		  </div>
+		 
+		  <button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+	</div>
+	</div>
+</div>
 </body>
 </html>

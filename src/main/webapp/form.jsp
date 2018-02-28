@@ -7,9 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form id="login"  method="POST" action="/demo/ParamServlet">
-用户: <input type="text" name="username"><br>
+<form id="login"  method="POST" action="/demo/RegisterServlet">
+用户名: <input type="text" name="username"><br>
 密码: <input type="text" name="password"><br>
+爱好：
+<input type="checkbox" name = "hobby" value="running"/>跑步
+<input type="checkbox" name = "hobby" value="swimming"/>游泳
+<input type="checkbox" name = "hobby" value="reading"/>看书<br>
 验证:<input type="text" name="chekin"><br>
 <img src="/demo/CheckinDrawer"/><br/>
 <input type="submit" value="登录">
